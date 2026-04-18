@@ -1,0 +1,199 @@
+export const translations = {
+
+  en: {
+
+    loginTitle: "Login",
+    loginEmail: "Email",
+    loginPassword: "Password",
+    loginButton: "Login",
+    loginFailed: "Wrong credentials",
+
+    registerTitle: "Register",
+    registerName: "Full Name",
+    registerEmail: "Email",
+    registerPassword: "Password",
+    registerButton: "Register",
+    registerSuccess: "Account created successfully!",
+    registerFailed: "Registration failed, please try again.",
+
+    // Contact
+    contact: "Contact Us", 
+    name: "Name",
+    email: "Email",
+    subject: "Subject",
+    message: "Message",
+    send: "Send",
+  
+    title: "Indoor Gardening Plants - JUST PORTFOLIO PROJECT",
+    home: "Home",
+    cart: "Your Cart",
+    cartEmpty: "Cart is empty",
+    checkout: "Proceed to Payment",
+    processing: "Processing...",
+    addToCart: "Add to Cart",
+    remove: "Remove",
+    quantity: "Quantity",
+    heroTitle: "Bring Nature Into Your Home",
+    heroSubtitle: "Beautiful indoor plants delivered to your door",
+    deliveryTitle: "Delivery Details",
+    deliverySubmit: "Complete order",
+    cancelTitle: "Payment Canceled",
+    cancelMessage: "Your payment was cancelled. You can try again",
+    cancelBack: "Payment is canceled",
+    name: "Full name",
+    address: "Address",
+    city: "City",
+    postal: "Postal Code",
+    country: "Country",
+
+
+    comments: {
+    title: "Comments",
+    name: "Your name",
+    placeholder: "Write a comment...",
+    post: "Post",
+    empty: "No comments yet",
+    commentsButtonShow: "Show comments",
+    commentsButtonHide: "Hide comments",
+              }
+  },
+
+
+
+
+
+
+
+
+
+  es: {
+
+    
+    loginTitle: "Iniciar sesión",
+    loginEmail: "Correo electrónico",
+    loginPassword: "Contraseña",
+    loginButton: "Entrar",
+    loginFailed: "Credenciales incorrectas",
+
+    registerTitle: "Registrarse",
+    registerName: "Nombre completo",
+    registerEmail: "Correo electrónico",
+    registerPassword: "Contraseña",
+    registerButton: "Registrarse",
+    registerSuccess: "¡Cuenta creada con éxito!",
+    registerFailed: "Error al registrarse, inténtelo de nuevo.",
+
+    
+    // Contact
+    contact: "Contáctanos",
+    name: "Nombre",
+    email: "Correo electrónico",
+    subject: "Asunto",
+    message: "Mensaje",
+    send: "Enviar",
+
+
+    title: "Plantas de Jardinería Interior - PARA PORTFOLIO, NO REAL",
+    home: "Inicio",
+    cart: "Tu Carrito",
+    cartEmpty: "El carrito está vacío",
+    checkout: "Proceder al pago",
+    processing: "Procesando...",
+    addToCart: "Agregar al carrito",
+    remove: "Eliminar",
+    quantity: "Cantidad",
+    heroTitle: "Lleva la naturaleza a tu hogar",
+    heroSubtitle: "Hermosas plantas de interior entregadas a tu puerta",
+    deliveryTitle: "Detalles de entrega",
+    deliverySubmit: "Finalizar pedido",
+    cancelTitle: "Pago cancelado",
+    cancelMessage: "Su pago fue cancelado. Puede intentarlo nuevamente.",
+    cancelBack: "Volver a la tienda",
+    name: "Nombre completo",
+    address: "Dirección",
+    city: "Ciudad",
+    postal: "Código postal",
+    country: "País",
+
+
+    comments: {
+    title: "Comentarios",
+    name: "Tu nombre",
+    placeholder: "Escribe un comentario...",
+    post: "Publicar",
+    empty: "Aún no hay comentarios",
+    commentsButtonShow: "Mostrar comentarios",
+    commentsButtonHide: "Ocultar comentarios",
+              }
+  },
+
+
+
+
+
+
+
+
+  de: {
+    
+    loginTitle: "Anmelden",
+    loginEmail: "E-Mail",
+    loginPassword: "Passwort",
+    loginButton: "Anmelden",
+    loginFailed: "Falsche Anmeldedaten",
+
+    registerTitle: "Registrieren",
+    registerName: "Vollständiger Name",
+    registerEmail: "E-Mail",
+    registerPassword: "Passwort",
+    registerButton: "Registrieren",
+    registerSuccess: "Konto erfolgreich erstellt!",
+    registerFailed: "Registrierung fehlgeschlagen, bitte erneut versuchen.",
+
+
+
+    // Contact
+
+    contact: "Kontaktieren Sie uns", 
+    name: "Name",
+    email: "E-Mail",
+    subject: "Betreff",
+    message: "Nachricht",
+    send: "Senden",
+
+    title: "Zimmerpflanzen - NUR PORTFOLIO-PROJEKT",
+    home: "Startseite",
+    cart: "Warenkorb",
+    cartEmpty: "Der Warenkorb ist leer",
+    checkout: "Zur Kasse",
+    processing: "Verarbeitung...",
+    addToCart: "In den Warenkorb",
+    remove: "Entfernen",
+    quantity: "Menge",
+    heroTitle: "Holen Sie sich die Natur nach Hause",
+    heroSubtitle: "Wunderschöne Zimmerpflanzen direkt an Ihre Haustür geliefert",
+    deliveryTitle: "Lieferdetails",
+    deliverySubmit: "Bestellung abschliessen",
+    cancelTitle: "Zahlung storniert",
+    cancelMessage: "Ihre Zahlung wurde storniert. Sie können es erneut versuchen",
+    cancelBack: "Zurück zum Shop",
+    name: "Vollständiger Name",
+    address: "Adresse",
+    city: "Stadt",
+    postal: "Posteleizahl",
+    country: "Land",
+
+
+    comments: {
+    title: "Kommentare",
+    name: "Ihr Name",
+    placeholder: "Schreiben Sie einen Kommentar...",
+    post: "Senden",
+    empty: "Noch keine Kommentare",
+    commentsButtonShow: "Kommentare anzeigen",
+    commentsButtonHide: "Kommentare ausblenden",
+              }
+
+  }
+};
+

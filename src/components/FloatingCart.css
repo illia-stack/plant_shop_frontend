@@ -1,0 +1,41 @@
+/* floating-cart.css */
+.floating-cart {
+  position: sticky;
+  top: 20px;
+
+  width: fit-content;       /* IMPORTANT */
+  margin-left: auto;        /* pushes it to right */
+  margin-right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #27ae60;
+  color: white;
+
+  padding: 10px 14px;
+  border-radius: 999px;     /* pill shape */
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.2s ease;
+}
+
+
+
+/* Wenn der Benutzer mehr als 100px gescrollt hat, verschiebe den Cart */
+.floating-cart.scrolled {
+  transform: translateY(-40px);  /* Verschiebt den Warenkorb nach oben */
+  transition: transform 0.3s ease-in-out; /* Sanfte Animation */
+}
+
+/* Hover-Effekt */
+.floating-cart:hover {
+  transform: scale(1.1); /* Vergrößert das Element leicht beim Hover */
+}

@@ -1,0 +1,65 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 25px;
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #dfe6e9;
+}
+
+.navbar a {
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+
+.cart-indicator {
+  font-weight: 600;
+}
+
+
+
+.layout {
+  position: relative;
+} /* floating cart */
+
+
+
+
+.lang-switch button {
+  margin-left: 6px;
+}
+
+
+
+.container {
+  padding: 20px;
+}

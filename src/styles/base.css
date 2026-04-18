@@ -1,0 +1,38 @@
+/* RESET + GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+
+  background:
+    radial-gradient(ellipse at top left, #a5d6a7 0%, transparent 60%),
+    radial-gradient(ellipse at bottom right, #81c784 0%, transparent 60%),
+    radial-gradient(ellipse at center, #c8e6c9 0%, transparent 70%),
+    #f1f8e9;
+}
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}
+
+body.dark .navbar {
+  background: #1a1a1a;
+}
+
+body.dark .hero-banner {
+  background: #2e7d32;
+  color: white;
+}
