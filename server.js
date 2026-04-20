@@ -1,17 +1,18 @@
+// server.js
 const express = require("express");
 const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Statische Dateien aus dem Build-Ordner bereitstellen
+// Serve static files from the React app
 app.use(express.static(path.join(__dirname, "build")));
 
-// Alle Routen auf index.html umleiten (für React Router)
+// Handle React routing, return all requests to React app
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server läuft auf Port ${PORT}`);
-})
+  console.log(`Server listening on port ${PORT}`);
+});
