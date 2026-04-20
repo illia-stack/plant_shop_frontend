@@ -1,65 +1,93 @@
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 12px 25px;
-
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid #dfe6e9;
+  background: #2c3e50;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.navbar a {
-  font-weight: 600;
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
-
-.navbar a:hover {
-  opacity: 0.8;
-}
-
-
-
-
 
 .logo {
-  font-weight: bold;
-  font-size: 18px;
+  width: 40px;
 }
 
+/* RIGHT (desktop) */
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
-
-
-
-.cart-indicator {
-  font-weight: 600;
+/* hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
+/* flags */
+.flags img {
+  width: 28px;
+  cursor: pointer;
+  margin: 0 3px;
+}
 
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    background: #2c3e50;
+
+    flex-direction: column;
+    padding: 20px;
+
+    display: none;
+  }
+
+  .nav-right.open {
+    display: flex;
+  }
+
+  .nav-item,
+  .flags,
+  .theme-btn,
+  .logout,
+  a {
+    margin: 10px 0;
+  }
+}
+
+/* CART */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 15px;
+    margin: 80px auto;
+  }
+
+  .cart-card {
+    width: 100%;
+  }
+}
 
 .layout {
   position: relative;
-} /* floating cart */
-
-
-
-
-.lang-switch button {
-  margin-left: 6px;
-}
-
-
-
-.container {
-  padding: 20px;
 }

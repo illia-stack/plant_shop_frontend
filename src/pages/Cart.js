@@ -4,7 +4,7 @@ import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import { translations } from "../translations";
 import { AuthContext } from "../context/AuthContext";
-import { API_BASE_URL, BACKEND_URL } from "../config";
+import { API_BASE_URL } from "../config";
 
 function Cart() {
   const { language } = useContext(LanguageContext);
@@ -46,14 +46,7 @@ function Cart() {
       });
   }, [language]);
 
-  if (products.length === 0) {
-    return (
-      <div className="cart-container">
-        <h1>{t.cartTitle}</h1>
-        <p>Loading products...</p>
-      </div>
-    );
-  }
+
 
   return (
     <div className="cart-container">
@@ -67,29 +60,18 @@ function Cart() {
         <>
           {cart.map((item) => {
             const product = products.find((p) => p.id === item.id);
-            if (!product) return null;
 
-            let imageSrc = product.image_url
-              ? product.image_url.startsWith("http")
-                ? product.image_url
-                : `${BACKEND_URL}/uploads/${product.image_url}`
-              : "https://via.placeholder.com/100";
+            const name = product?.name || item.name;
+            const price = product?.price || item.price;
+
+           
 
             return (
               <div key={item.id} className="cart-card">
-                <img
-                  src={imageSrc}
-                  alt={product.name}
-                  className="cart-image"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://via.placeholder.com/100";
-                  }}
-                />
 
                 <div className="cart-info">
-                  <h3>{product.name}</h3>
-                  <p>{Number(product.price).toFixed(2)} €</p>
+                  <h3>{name}</h3>
+                  <p>{Number(price).toFixed(2)} € × {item.quantity}</p>
 
                   <div className="cart-qty">
                     <button onClick={() => decreaseQty(item.id)}>-</button>

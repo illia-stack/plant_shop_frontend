@@ -82,42 +82,9 @@ export const CartProvider = ({ children }) => {
     total = total * 0.95;
   }
 
-  // ---------------------------
-  // CHECKOUT
-  // ---------------------------
+  
 
-  const checkout = async (preparedCart) => {
-    try {
-      const response = await fetch(
-        "http://localhost/4_Indoor_Gardening_Plants/indoor-gardening-backend/api/create-checkout-session.php",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ cart: preparedCart })
-        }
-      );
-
-      const text = await response.text();
-
-      let data;
-      try {
-        data = JSON.parse(text);
-      } catch (err) {
-        console.error("JSON ERROR:", err);
-        return;
-      }
-
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        console.error("Stripe error:", data);
-      }
-    } catch (error) {
-      console.error("Checkout failed:", error);
-    }
-  };
+  
 
   return (
     <CartContext.Provider
@@ -128,8 +95,7 @@ export const CartProvider = ({ children }) => {
         decreaseQty,
         removeFromCart,
         clearCart,
-        total,
-        checkout
+        total
       }}
     >
       {children}

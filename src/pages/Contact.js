@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { API_BASE_URL } from "../config";
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations";
 
@@ -11,7 +12,7 @@ const Contact = () => {
       <h2>{t.contact}</h2>
 
       <form
-        action="http://localhost/4_Indoor_Gardening_Plants/indoor-gardening-backend/api/send-contact.php"
+        action={`${API_BASE_URL}/send-contact.php`}
         method="POST"
         style={{ display: "flex", flexDirection: "column", gap: "15px" }}
       >

@@ -60,7 +60,9 @@ function Comments({ productId }) {
         }
       );
 
-      const result = await res.json();
+      
+      const text = await res.text();
+      const result = JSON.parse(text);
 
       if (!result.success) {
         alert("Failed to post comment");
