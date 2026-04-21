@@ -33,7 +33,8 @@ const Contact = () => {
 
   return (
     <div className="container" style={{ maxWidth: "600px" }}>
-      <h2>{t.contact}</h2> {/* ✅ Titel korrekt ausgeben */}
+      <h2>{t.contact.contact}</h2>  // Titel
+
 
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder={t.name} required />
