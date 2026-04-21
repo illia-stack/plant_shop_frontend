@@ -13,33 +13,26 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    try {
-      const res = await fetch(`${API_BASE_URL}/login.php`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password })
-      });
+  try {
+    const res = await fetch(`${API_BASE_URL}/login.php`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password })
+    });
 
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        handleLogin();
-      };
+    const data = await res.json();
 
-      const data = await res.json();
-
-      if (data.success) {
-        login(data.user);
-        alert(t.loginSuccess || "Logged in!");
-      } else {
-        alert(t.loginFailed);
-      }
-    } catch (err) {
-      console.error(err);
+    if (data.success) {
+      login(data.user);
+      alert(t.loginSuccess || "Logged in!");
+    } else {
       alert(t.loginFailed);
     }
-
-
-  };
+  } catch (err) {
+    console.error(err);
+    alert(t.loginFailed);
+  }
+};
 
   return (
     <div style={{ padding: 40 }}>

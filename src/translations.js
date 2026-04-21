@@ -48,6 +48,7 @@ export const translations = {
     successTitle: "Payment Successful 🎉",
     successMessage: "Thank you for your order!",
     backHome: "Back to Shop",
+    noProducts: "No products available",
 
     name: "Full name",
     address: "Address",
@@ -115,6 +116,7 @@ export const translations = {
     cancelTitle: "Zahlung storniert",
     cancelMessage: "Ihre Zahlung wurde storniert. Sie können es erneut versuchen",
     cancelBack: "Zurück zum Shop",
+    noProducts: "Keine Produkte verfügbar",
 
     successTitle: "Zahlung erfolgreich 🎉",
     successMessage: "Vielen Dank für Ihre Bestellung!",
@@ -190,6 +192,7 @@ export const translations = {
     successTitle: "Pago exitoso 🎉",
     successMessage: "¡Gracias por tu pedido!",
     backHome: "Volver a la tienda",
+    noProducts: "No hay productos disponibles",
 
     name: "Nombre completo",
     address: "Dirección",

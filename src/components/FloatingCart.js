@@ -39,7 +39,7 @@ function FloatingCart() {
       className={`floating-cart ${isScrolled ? "scrolled" : ""}`}
       onClick={() => navigate("/cart")}
     >
-      🛒 {cartCount} | {total.toFixed(2)} €
+      🛒 {cartCount} | {(Number(total) || 0).toFixed(2)} €
     </div>
   );
 }

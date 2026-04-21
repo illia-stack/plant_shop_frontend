@@ -109,18 +109,9 @@ function Home() {
       <div className="products">
 
         {filteredPlants.length > 0 ? (
-
-          filteredPlants.map((plant) => (
-            <PlantCard
-              key={plant.id}
-              plant={plant}
-            />
-          ))
-
+          filteredPlants.map((plant) => <PlantCard key={plant.id} plant={plant} />)
         ) : (
-
           <p>{t.noProducts}</p>
-
         )}
 
       </div>

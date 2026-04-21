@@ -5,7 +5,7 @@ import { translations } from "../translations";
 
 const Contact = () => {
   const { language } = useContext(LanguageContext);
-  const t = translations[language].contact; // ✅ direkt das Kontakt-Objekt
+  const t = translations[language].contact; // ✅ t ist jetzt direkt das Kontakt-Objekt
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,27 +20,28 @@ const Contact = () => {
       const data = await res.json();
 
       if (data.success) {
-        alert(t.sendSuccess);
-        e.target.reset();
+        alert(t.sendSuccess); // Erfolgsmeldung
+        e.target.reset();     // Formular zurücksetzen
       } else {
-        alert(t.sendError);
+        alert(t.sendError);   // Fehlermeldung
       }
     } catch (err) {
       console.error(err);
-      alert(t.sendError);
+      alert(t.sendError);     // Fehlermeldung bei Netzwerkfehler
     }
   };
 
   return (
     <div className="container" style={{ maxWidth: "600px" }}>
-      <h2>{t.contact}</h2>
-<form onSubmit={handleSubmit}>
-  <input type="text" name="name" placeholder={t.name} required />
-  <input type="email" name="email" placeholder={t.email} required />
-  <input type="text" name="subject" placeholder={t.subject} required />
-  <textarea name="message" placeholder={t.message} rows={5} required />
-  <button type="submit" className="primary-btn">{t.send}</button>
-</form>
+      <h2>{t.contact}</h2> {/* ✅ Titel korrekt ausgeben */}
+
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder={t.name} required />
+        <input type="email" name="email" placeholder={t.email} required />
+        <input type="text" name="subject" placeholder={t.subject} required />
+        <textarea name="message" placeholder={t.message} rows={5} required />
+        <button type="submit" className="primary-btn">{t.send}</button>
+      </form>
     </div>
   );
 };
